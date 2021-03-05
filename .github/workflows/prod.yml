@@ -1,0 +1,31 @@
+name: Deploy topics til prod
+
+on:
+  push:
+    tags:
+      - prod/*
+
+jobs:
+  deploy-krav-topic-to-prod:
+    name: Deploy krav-topic to prod
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@master
+      - uses: nais/deploy/actions/deploy@master
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: prod-gcp
+          RESOURCE: topics/prod/krav-topic.yaml
+
+  deploy-soeknad-topic-to-prod:
+    name: Deploy søknad-topic to prod
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@master
+      - uses: nais/deploy/actions/deploy@master
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: prod-gcp
+          RESOURCE: topics/prod/soeknad-topic.yaml

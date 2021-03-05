@@ -1,0 +1,31 @@
+name: Deploy topics to dev
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy-krav-topic-to-dev:
+    name: Deploy krav-topic to dev
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@master
+      - uses: nais/deploy/actions/deploy@master
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-gcp
+          RESOURCE: topics/dev/krav-topic.yaml
+
+  deploy-soeknad-topic-to-dev:
+    name: Deploy søknad-topic to dev
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - uses: actions/checkout@master
+      - uses: nais/deploy/actions/deploy@master
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-gcp
+          RESOURCE: topics/dev/soeknad-topic.yaml
