@@ -1,0 +1,27 @@
+apiVersion: kafka.nais.io/v1
+kind: Topic
+metadata:
+  name: privat-sykepenger-inntektsmelding
+  namespace: helsearbeidsgiver
+  labels:
+    team: helsearbeidsgiver
+  annotations:
+    dcat.data.nav.no/title: "Inntektsmeldinger fra syfoinntektsmelding"
+    dcat.data.nav.no/description: "Inntektsmeldinger som omhandler sykepenger"
+    dcat.data.nav.no/keyword: "sykepenger, inntektsmelding"
+    dcat.data.nav.no/theme: "sykepenger"
+
+spec:
+  pool: nav-prod
+  config:  # optional; all fields are optional too; defaults shown
+    cleanupPolicy: delete  # delete, compact
+    minimumInSyncReplicas: 1
+    partitions: 1
+    replication: 3  # see min/max requirements
+    retentionBytes: -1  # -1 means unlimited
+    retentionHours: 720  # -1 means unlimited
+  acl:
+    - team: helsearbeidsgiver
+      application: syfoinntektsmelding
+      access: write   # read, write, readwrite
+
