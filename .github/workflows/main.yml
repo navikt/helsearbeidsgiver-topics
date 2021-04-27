@@ -27,3 +27,14 @@ jobs:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-gcp
           RESOURCE: topics/dev/soeknad-topic.yaml
+
+  deploy-im-topic-to-dev:
+    name: Deploy im-topic to dev
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: nais/deploy/actions/deploy@master
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-gcp
+          RESOURCE: topics/dev/inntektsmedling-topic.yaml
