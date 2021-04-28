@@ -14,7 +14,6 @@ metadata:
 spec:
   pool: nav-dev
   config:  # optional; all fields are optional too; defaults shown
-    cleanupPolicy: delete  # delete, compact
     minimumInSyncReplicas: 1
     partitions: 1
     replication: 1  # see min/max requirements
@@ -23,4 +22,4 @@ spec:
   acl:
     - team: helsearbeidsgiver
       application: syfoinntektsmelding
-      access: write   # read, write, readwrite
+      access: readwrite
