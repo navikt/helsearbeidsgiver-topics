@@ -23,3 +23,7 @@ spec:
     - team: helsearbeidsgiver
       application: syfoinntektsmelding
       access: readwrite
+    - team: tbd
+      application: spedisjon
+      access: read
+      
