@@ -23,3 +23,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-api
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-brreg
+      access: readwrite
