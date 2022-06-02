@@ -1,7 +1,7 @@
 apiVersion: kafka.nais.io/v1
 kind: Topic
 metadata:
-  name: im.rapid.v1
+  name: rapid
   namespace: helsearbeidsgiver
   labels:
     team: helsearbeidsgiver
