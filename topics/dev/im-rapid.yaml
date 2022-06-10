@@ -26,3 +26,12 @@ spec:
     - team: helsearbeidsgiver
       application: im-brreg
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-db
+      access: readwrite
+    - team: helsearbeidsgiver
+      application: im-joark
+      access: readwrite
+    - team: helsearbeidsgiver
+      application: im-kontroll
+      access: readwrite
