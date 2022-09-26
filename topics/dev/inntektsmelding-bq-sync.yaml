@@ -1,0 +1,25 @@
+apiVersion: kafka.nais.io/v1
+kind: Topic
+metadata:
+  name: rapid
+  namespace: helsearbeidsgiver
+  labels:
+    team: helsearbeidsgiver
+  annotations:
+    dcat.data.nav.no/title: "Inntektsmelding bigquery sync"
+    dcat.data.nav.no/description: "Sync av inntektsmeldingdata til bigquery"
+    dcat.data.nav.no/keyword: "sykepenger, inntektsmelding"
+    dcat.data.nav.no/theme: "sykepenger"
+
+spec:
+  pool: nav-dev
+  config:  # optional; all fields are optional too; defaults shown
+    minimumInSyncReplicas: 1
+    partitions: 1
+    replication: 2  # see min/max requirements
+    retentionBytes: -1  # -1 means unlimited
+    retentionHours: 168  # -1 means unlimited
+  acl:
+    - team: helsearbeidsgiver
+      application: syfoinntektsmelding
+      access: readwrite
