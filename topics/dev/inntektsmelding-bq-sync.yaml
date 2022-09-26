@@ -1,13 +1,13 @@
 apiVersion: kafka.nais.io/v1
 kind: Topic
 metadata:
-  name: rapid
+  name: spinn-bq
   namespace: helsearbeidsgiver
   labels:
     team: helsearbeidsgiver
   annotations:
-    dcat.data.nav.no/title: "Inntektsmelding bigquery sync"
-    dcat.data.nav.no/description: "Sync av inntektsmeldingdata til bigquery"
+    dcat.data.nav.no/title: "Spinn bigquery sync"
+    dcat.data.nav.no/description: "Sync av inntektsmeldinger og utsatte oppgaver fra syfoinntektsmelding til bigquery"
     dcat.data.nav.no/keyword: "sykepenger, inntektsmelding"
     dcat.data.nav.no/theme: "sykepenger"
 
