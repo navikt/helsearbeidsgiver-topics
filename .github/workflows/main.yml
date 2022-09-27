@@ -49,3 +49,14 @@ jobs:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-gcp
           RESOURCE: topics/dev/im-rapid.yaml
+
+  deploy-inntektsmelding-bq-sync:
+    name: Deploy inntektsmelding-bq-sync to dev
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: nais/deploy/actions/deploy@master
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-gcp
+          RESOURCE: topics/dev/inntektsmelding-bq-sync.yaml
