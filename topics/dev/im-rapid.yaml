@@ -44,3 +44,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-inntekt
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-aareg
+      access: readwrite
