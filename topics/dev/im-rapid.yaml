@@ -41,3 +41,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-pdl
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-inntekt
+      access: readwrite
