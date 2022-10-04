@@ -47,3 +47,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-aareg
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-syk
+      access: readwrite
