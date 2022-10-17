@@ -50,3 +50,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-syk
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-egenmelding
+      access: readwrite
