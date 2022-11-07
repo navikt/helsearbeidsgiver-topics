@@ -26,4 +26,6 @@ spec:
     - team: tbd
       application: spedisjon
       access: read
-      
+    - team: flex
+      application: flex-syketilfelle
+      access: read
