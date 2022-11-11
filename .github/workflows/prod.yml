@@ -1,9 +1,8 @@
 name: Deploy topics til prod
 
 on:
-  push:
-    tags:
-      - prod/*
+  release:
+    types: [released]
 
 jobs:
   deploy-krav-topic-to-prod:
