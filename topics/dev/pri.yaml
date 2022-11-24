@@ -26,3 +26,6 @@ spec:
     - team: helsearbeidsgiver
       application: helsearbeidsgiver-bro-sykepenger
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-helsebro
+      access: readwrite

@@ -56,3 +56,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-egenmelding
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-helsebro
+      access: readwrite
