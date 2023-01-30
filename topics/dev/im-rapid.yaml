@@ -30,13 +30,7 @@ spec:
       application: im-brreg
       access: readwrite
     - team: helsearbeidsgiver
-      application: im-db
-      access: readwrite
-    - team: helsearbeidsgiver
       application: im-joark
-      access: readwrite
-    - team: helsearbeidsgiver
-      application: im-kontroll
       access: readwrite
     - team: helsearbeidsgiver
       application: im-akkumulator
@@ -49,12 +43,6 @@ spec:
       access: readwrite
     - team: helsearbeidsgiver
       application: im-aareg
-      access: readwrite
-    - team: helsearbeidsgiver
-      application: im-syk
-      access: readwrite
-    - team: helsearbeidsgiver
-      application: im-egenmelding
       access: readwrite
     - team: helsearbeidsgiver
       application: im-helsebro
