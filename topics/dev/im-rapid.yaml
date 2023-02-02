@@ -53,3 +53,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-notifikasjon
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-db
+      access: readwrite
