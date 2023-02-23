@@ -59,3 +59,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-preutfylt
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-distribusjon
+      access: readwrite
