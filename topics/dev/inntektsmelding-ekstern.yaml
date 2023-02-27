@@ -21,7 +21,7 @@ spec:
     retentionHours: 168  # -1 means unlimited
   acl:
     - team: helsearbeidsgiver
-      application: im-joark
+      application: im-distribusjon
       access: readwrite
     - team: helsearbeidsgiver
       application: syfoinntektsmelding
