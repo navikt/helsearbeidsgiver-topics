@@ -60,7 +60,16 @@ jobs:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-gcp
           RESOURCE: topics/dev/inntektsmelding-bq-sync.yaml
-
+  deploy-inntektsmelding-ekstern:
+    name: Deploy inntektsmelding-ekstern to dev
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: nais/deploy/actions/deploy@master
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: dev-gcp
+          RESOURCE: topics/dev/inntektsmelding-ekstern.yaml
   deploy-pri:
     name: Deploy pri to dev
     runs-on: ubuntu-latest
