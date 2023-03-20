@@ -62,3 +62,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-distribusjon
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-innsending
+      access: readwrite
