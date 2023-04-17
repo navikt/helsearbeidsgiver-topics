@@ -59,3 +59,14 @@ jobs:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: prod-gcp
           RESOURCE: topics/prod/im-rapid.yaml
+
+  deploy-inntektsmelding-ekstern-to-prod:
+    name: Deploy inntektsmelding-ekstern to prod
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@master
+      - uses: nais/deploy/actions/deploy@master
+        env:
+          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
+          CLUSTER: prod-gcp
+          RESOURCE: topics/prod/inntektsmelding-ekstern.yaml
