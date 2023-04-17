@@ -5,7 +5,7 @@ on:
     types: [released]
 
 jobs:
-  deploy-topic-to-prod:
+  deploy-topics-to-prod:
     runs-on: ubuntu-latest
     strategy:
       matrix:
