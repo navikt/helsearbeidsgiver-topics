@@ -5,68 +5,22 @@ on:
     types: [released]
 
 jobs:
-  deploy-krav-topic-to-prod:
-    name: Deploy krav-topic to prod
+  deploy-topics-to-prod:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        topic: [
+          im-rapid,
+          inntektsmelding-ekstern,
+          inntektsmelding-topic,
+          krav-topic,
+          pri,
+          soeknad-topic,
+        ]
     steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
+      - uses: actions/checkout@v3
+      - uses: nais/deploy/actions/deploy@v1
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: prod-gcp
-          RESOURCE: topics/prod/krav-topic.yaml
-
-  deploy-soeknad-topic-to-prod:
-    name: Deploy søknad-topic to prod
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
-        env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: prod-gcp
-          RESOURCE: topics/prod/soeknad-topic.yaml
-
-  deploy-im-topic-to-prod:
-    name: Deploy im-topic to prod
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
-        env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: prod-gcp
-          RESOURCE: topics/prod/inntektsmelding-topic.yaml
-
-  deploy-pri-to-prod:
-    name: Deploy pri to prod
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
-        env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: prod-gcp
-          RESOURCE: topics/prod/pri.yaml
-
-  deploy-im-rapid-to-prod:
-    name: Deploy im-rapid to prod
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
-        env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: prod-gcp
-          RESOURCE: topics/prod/im-rapid.yaml
-
-  deploy-inntektsmelding-ekstern-to-prod:
-    name: Deploy inntektsmelding-ekstern to prod
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
-        env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: prod-gcp
-          RESOURCE: topics/prod/inntektsmelding-ekstern.yaml
+          RESOURCE: topics/prod/${{ matrix.topic }}.yaml

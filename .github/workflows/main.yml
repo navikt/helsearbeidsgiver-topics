@@ -6,77 +6,23 @@ on:
       - main
 
 jobs:
-  deploy-krav-topic-to-dev:
-    name: Deploy krav-topic to dev
+  deploy-topics-to-dev:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        topic: [
+          im-rapid,
+          inntektsmelding-bq-sync,
+          inntektsmelding-ekstern,
+          inntektsmelding-topic,
+          krav-topic,
+          pri,
+          soeknad-topic,
+        ]
     steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
+      - uses: actions/checkout@v3
+      - uses: nais/deploy/actions/deploy@v1
         env:
           APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
           CLUSTER: dev-gcp
-          RESOURCE: topics/dev/krav-topic.yaml
-
-  deploy-soeknad-topic-to-dev:
-    name: Deploy søknad-topic to dev
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
-        env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: dev-gcp
-          RESOURCE: topics/dev/soeknad-topic.yaml
-
-  deploy-im-topic-to-dev:
-    name: Deploy im-topic to dev
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
-        env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: dev-gcp
-          RESOURCE: topics/dev/inntektsmelding-topic.yaml
-
-  deploy-im-rapid-to-dev:
-    name: Deploy im-rapid to dev
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
-        env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: dev-gcp
-          RESOURCE: topics/dev/im-rapid.yaml
-
-  deploy-inntektsmelding-bq-sync:
-    name: Deploy inntektsmelding-bq-sync to dev
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
-        env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: dev-gcp
-          RESOURCE: topics/dev/inntektsmelding-bq-sync.yaml
-  deploy-inntektsmelding-ekstern:
-    name: Deploy inntektsmelding-ekstern to dev
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
-        env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: dev-gcp
-          RESOURCE: topics/dev/inntektsmelding-ekstern.yaml
-  deploy-pri:
-    name: Deploy pri to dev
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@master
-      - uses: nais/deploy/actions/deploy@master
-        env:
-          APIKEY: ${{ secrets.NAIS_DEPLOY_APIKEY }}
-          CLUSTER: dev-gcp
-          RESOURCE: topics/dev/pri.yaml
+          RESOURCE: topics/dev/${{ matrix.topic }}.yaml
