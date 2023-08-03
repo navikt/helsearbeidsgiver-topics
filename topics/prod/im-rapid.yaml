@@ -68,3 +68,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-innsending
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-tilgangservice
+      access: readwrite
