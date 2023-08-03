@@ -74,3 +74,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-tilgangservice
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-trengerservice
+      access: readwrite
