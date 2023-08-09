@@ -33,9 +33,6 @@ spec:
       application: im-joark
       access: readwrite
     - team: helsearbeidsgiver
-      application: im-akkumulator
-      access: readwrite
-    - team: helsearbeidsgiver
       application: im-pdl
       access: readwrite
     - team: helsearbeidsgiver
