@@ -15,7 +15,7 @@ spec:
   pool: nav-dev
   config:  # optional; all fields are optional too; defaults shown
     minimumInSyncReplicas: 1
-    partitions: 1
+    partitions: 3
     replication: 2  # see min/max requirements
     retentionBytes: -1  # -1 means unlimited
     retentionHours: 168  # -1 means unlimited
