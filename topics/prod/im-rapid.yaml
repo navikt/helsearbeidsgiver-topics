@@ -71,3 +71,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-trengerservice
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-eksternt-system
+      access: readwrite
