@@ -30,3 +30,6 @@ spec:
     - team: flex
       application: flex-syketilfelle
       access: read
+    - team: flex
+      application: ditt-sykefravaer-backend
+      access: read
