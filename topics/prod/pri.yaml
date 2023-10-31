@@ -30,6 +30,9 @@ spec:
       application: im-forespoersel-besvart
       access: readwrite
     - team: helsearbeidsgiver
+      application: im-forespoersel-marker-besvart
+      access: readwrite
+    - team: helsearbeidsgiver
       application: im-forespoersel-mottatt
       access: readwrite
 
