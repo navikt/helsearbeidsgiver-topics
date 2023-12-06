@@ -77,3 +77,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-bro-spinn
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-aktiveorgnrservice
+      access: readwrite
