@@ -23,6 +23,9 @@ spec:
     - team: helsearbeidsgiver
       application: syfoinntektsmelding
       access: readwrite
+    - team: helsearbeidsgiver
+      application: spinosaurus
+      access: readwrite
     - team: tbd
       application: spedisjon
       access: read
