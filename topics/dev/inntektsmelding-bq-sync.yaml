@@ -7,7 +7,7 @@ metadata:
     team: helsearbeidsgiver
   annotations:
     dcat.data.nav.no/title: "Spinn bigquery sync"
-    dcat.data.nav.no/description: "Sync av inntektsmeldinger og utsatte oppgaver fra syfoinntektsmelding til bigquery"
+    dcat.data.nav.no/description: "Sync av inntektsmeldinger og utsatte oppgaver fra spinosaurus til bigquery"
     dcat.data.nav.no/keyword: "sykepenger, inntektsmelding"
     dcat.data.nav.no/theme: "sykepenger"
 
@@ -21,7 +21,7 @@ spec:
     retentionHours: 168  # -1 means unlimited
   acl:
     - team: helsearbeidsgiver
-      application: syfoinntektsmelding
+      application: spinosaurus
       access: readwrite
     - team: helsearbeidsgiver
       application: helsearbeidsgiver-bigquery

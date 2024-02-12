@@ -6,7 +6,7 @@ metadata:
   labels:
     team: helsearbeidsgiver
   annotations:
-    dcat.data.nav.no/title: "Inntektsmeldinger fra syfoinntektsmelding"
+    dcat.data.nav.no/title: "Inntektsmeldinger fra spinosaurus"
     dcat.data.nav.no/description: "Inntektsmeldinger som omhandler sykepenger"
     dcat.data.nav.no/keyword: "sykepenger, inntektsmelding"
     dcat.data.nav.no/theme: "sykepenger"
@@ -21,9 +21,6 @@ spec:
     retentionBytes: -1  # -1 means unlimited
     retentionHours: 720  # -1 means unlimited
   acl:
-    - team: helsearbeidsgiver
-      application: syfoinntektsmelding
-      access: write   # read, write, readwrite
     - team: helsearbeidsgiver
       application: spinosaurus
       access: write   # read, write, readwrite
