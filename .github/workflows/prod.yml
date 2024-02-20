@@ -15,9 +15,7 @@ jobs:
           im-rapid,
           inntektsmelding-ekstern,
           inntektsmelding-topic,
-          krav-topic,
           pri,
-          soeknad-topic,
         ]
     steps:
       - uses: actions/checkout@v4
