@@ -14,12 +14,9 @@ jobs:
       matrix:
         topic: [
           im-rapid,
-          inntektsmelding-bq-sync,
           inntektsmelding-ekstern,
           inntektsmelding-topic,
-          krav-topic,
           pri,
-          soeknad-topic,
         ]
     steps:
       - uses: actions/checkout@v4
