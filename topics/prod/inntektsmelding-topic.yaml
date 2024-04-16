@@ -33,3 +33,6 @@ spec:
     - team: flex
       application: ditt-sykefravaer-backend
       access: read
+    - team: flex
+      application: flex-inntektsmelding-status
+      access: read
