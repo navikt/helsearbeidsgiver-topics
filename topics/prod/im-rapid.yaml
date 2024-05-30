@@ -42,6 +42,9 @@ spec:
       application: im-inntektservice
       access: readwrite
     - team: helsearbeidsgiver
+      application: im-inntekt-selvbestemt-service
+      access: readwrite
+    - team: helsearbeidsgiver
       application: im-aareg
       access: readwrite
     - team: helsearbeidsgiver
