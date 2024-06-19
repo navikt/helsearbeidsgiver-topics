@@ -24,6 +24,9 @@ spec:
       application: im-aapenimservice
       access: readwrite
     - team: helsearbeidsgiver
+      application: im-aktiveorgnrservice
+      access: readwrite
+    - team: helsearbeidsgiver
       application: im-altinn
       access: readwrite
     - team: helsearbeidsgiver
@@ -82,9 +85,6 @@ spec:
       access: readwrite
     - team: helsearbeidsgiver
       application: im-bro-spinn
-      access: readwrite
-    - team: helsearbeidsgiver
-      application: im-aktiveorgnrservice
       access: readwrite
     - team: helsearbeidsgiver
       application: im-feil-behandler
