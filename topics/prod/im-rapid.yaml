@@ -72,6 +72,12 @@ spec:
       application: im-innsending
       access: readwrite
     - team: helsearbeidsgiver
+      application: im-selvbestemt-hent-im-service
+      access: readwrite
+    - team: helsearbeidsgiver
+      application: im-selvbestemt-lagre-im-service
+      access: readwrite
+    - team: helsearbeidsgiver
       application: im-tilgangservice
       access: readwrite
     - team: helsearbeidsgiver
