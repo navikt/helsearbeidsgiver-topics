@@ -21,9 +21,6 @@ spec:
     retentionHours: 168  # -1 means unlimited
   acl:
     - team: helsearbeidsgiver
-      application: im-aapenimservice
-      access: readwrite
-    - team: helsearbeidsgiver
       application: im-altinn
       access: readwrite
     - team: helsearbeidsgiver
