@@ -92,3 +92,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-feil-behandler
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-berik-inntektsmelding-service
+      access: readwrite
