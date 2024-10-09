@@ -95,3 +95,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-berik-inntektsmelding-service
       access: readwrite
+    - team: helsearbeidsgiver
+      application: sykepenger-im-lps-api
+      access: read
