@@ -35,4 +35,7 @@ spec:
     - team: helsearbeidsgiver
       application: im-forespoersel-mottatt
       access: readwrite
+    - team: helsearbeidsgiver
+      application: im-forespoersel-forkastet
+      access: readwrite
 
