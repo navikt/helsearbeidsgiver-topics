@@ -38,4 +38,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-forespoersel-forkastet
       access: readwrite
-
+    - team: helsearbeidsgiver
+      application: im-forespoersel-infotrygd
+      access: readwrite
