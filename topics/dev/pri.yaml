@@ -41,3 +41,6 @@ spec:
     - team: helsearbeidsgiver
       application: im-forespoersel-infotrygd
       access: readwrite
+    - team: helsearbeidsgiver
+      application: sykepenger-im-lps-api
+      access: read
