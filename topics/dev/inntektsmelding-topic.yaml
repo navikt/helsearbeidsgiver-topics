@@ -26,6 +26,9 @@ spec:
     - team: tbd
       application: spedisjon
       access: read
+    - team: tbd
+      application: spedisjon-async
+      access: read
     - team: flex
       application: flex-syketilfelle
       access: read
