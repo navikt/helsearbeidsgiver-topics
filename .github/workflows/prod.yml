@@ -12,6 +12,7 @@ jobs:
     strategy:
       matrix:
         topic: [
+          api-innsending,
           im-rapid,
           inntektsmelding-ekstern,
           inntektsmelding-topic,
