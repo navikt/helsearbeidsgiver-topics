@@ -13,6 +13,7 @@ jobs:
       matrix:
         topic: [
           api-innsending,
+          dialog,
           im-rapid,
           inntektsmelding-ekstern,
           inntektsmelding-topic,
