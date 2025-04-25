@@ -25,4 +25,4 @@ spec:
       access: readwrite
     - team: helsearbeidsgiver
       application: dialog
-      access: readwrite
+      access: read
