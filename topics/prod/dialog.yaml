@@ -1,0 +1,28 @@
+apiVersion: kafka.nais.io/v1
+kind: Topic
+metadata:
+  name: dialog
+  namespace: helsearbeidsgiver
+  labels:
+    team: helsearbeidsgiver
+  annotations:
+    dcat.data.nav.no/title: "Dialog"
+    dcat.data.nav.no/description: "Sykmeldinger, søknader og forespørsler om inntektsmeldinger som skal sendes til arbeidsgiver gjennom Dialogporten"
+    dcat.data.nav.no/keyword: "sykepenger, arbeidsgiver, dialogporten"
+    dcat.data.nav.no/theme: "sykepenger"
+
+spec:
+  pool: nav-prod
+  config:  # optional; all fields are optional too; defaults shown
+    minimumInSyncReplicas: 1
+    partitions: 3
+    replication: 2  # see min/max requirements
+    retentionBytes: -1  # -1 means unlimited
+    retentionHours: 168  # -1 means unlimited
+  acl:
+    - team: helsearbeidsgiver
+      application: sykepenger-im-lps-api
+      access: readwrite
+    - team: helsearbeidsgiver
+      application: dialog
+      access: read
