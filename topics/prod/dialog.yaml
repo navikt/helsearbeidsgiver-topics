@@ -26,4 +26,3 @@ spec:
     - team: helsearbeidsgiver
       application: dialog
       access: read
-
