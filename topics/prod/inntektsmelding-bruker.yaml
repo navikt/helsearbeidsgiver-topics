@@ -12,7 +12,7 @@ metadata:
     dcat.data.nav.no/theme: "sykepenger"
 
 spec:
-  pool: nav-dev
+  pool: nav-prod
   config: # optional; all fields are optional too; defaults shown
     minimumInSyncReplicas: 1
     partitions: 3
@@ -22,7 +22,7 @@ spec:
   acl:
     - team: helsearbeidsgiver
       application: spinosaurus
-      access: readwrite
+      access: write   # read, write, readwrite
     - team: flex
       application: flex-syketilfelle
       access: read
