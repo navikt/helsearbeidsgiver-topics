@@ -16,6 +16,7 @@ jobs:
           api-innsending,
           dialog,
           im-rapid,
+          inntektsmelding-bruker,
           inntektsmelding-ekstern,
           inntektsmelding-topic,
           pri,
