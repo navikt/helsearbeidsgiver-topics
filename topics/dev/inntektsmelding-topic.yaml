@@ -13,7 +13,7 @@ metadata:
 
 spec:
   pool: nav-dev
-  config:  # optional; all fields are optional too; defaults shown
+  config: # optional; all fields are optional too; defaults shown
     minimumInSyncReplicas: 1
     partitions: 1
     replication: 2  # see min/max requirements
