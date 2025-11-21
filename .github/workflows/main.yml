@@ -15,6 +15,7 @@ jobs:
         topic: [
           api-innsending,
           dialog,
+          dokument-kobling,
           im-rapid,
           inntektsmelding-bruker,
           inntektsmelding-ekstern,
