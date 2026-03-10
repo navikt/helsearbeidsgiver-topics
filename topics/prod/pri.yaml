@@ -44,3 +44,6 @@ spec:
     - team: helsearbeidsgiver
       application: sykepenger-im-lps-api
       access: read
+    - team: helsearbeidsgiver
+      application: hag-admin
+      access: readwrite
