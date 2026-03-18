@@ -21,7 +21,7 @@ spec:
     retentionHours: 1  # -1 means unlimited
   acl:
     - team: helsearbeidsgiver
-      application: sykepenger-im-lps-api
+      application: fritakagp
       access: readwrite
     - team: helsearbeidsgiver
       application: dialog
