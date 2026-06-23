@@ -54,19 +54,7 @@ spec:
       application: im-helsebro
       access: readwrite
     - team: helsearbeidsgiver
-      application: im-forespoersel-besvart
-      access: readwrite
-    - team: helsearbeidsgiver
       application: im-forespoersel-marker-besvart
-      access: readwrite
-    - team: helsearbeidsgiver
-      application: im-forespoersel-mottatt
-      access: readwrite
-    - team: helsearbeidsgiver
-      application: im-forespoersel-forkastet
-      access: readwrite
-    - team: helsearbeidsgiver
-      application: im-forespoersel-infotrygd
       access: readwrite
     - team: helsearbeidsgiver
       application: im-notifikasjon
@@ -91,9 +79,6 @@ spec:
       access: readwrite
     - team: helsearbeidsgiver
       application: im-trengerservice
-      access: readwrite
-    - team: helsearbeidsgiver
-      application: im-bro-spinn
       access: readwrite
     - team: helsearbeidsgiver
       application: im-feil-behandler
