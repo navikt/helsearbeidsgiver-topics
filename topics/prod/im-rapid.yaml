@@ -75,6 +75,9 @@ spec:
       application: im-selvbestemt-lagre-im-service
       access: readwrite
     - team: helsearbeidsgiver
+      application: im-soeknad
+      access: readwrite
+    - team: helsearbeidsgiver
       application: im-tilgangservice
       access: readwrite
     - team: helsearbeidsgiver
