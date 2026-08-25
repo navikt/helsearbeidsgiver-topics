@@ -92,6 +92,3 @@ spec:
     - team: helsearbeidsgiver
       application: im-faisu-service
       access: readwrite
-    - team: helsearbeidsgiver
-      application: hag-admin
-      access: readwrite
