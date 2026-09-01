@@ -54,6 +54,9 @@ spec:
       application: im-helsebro
       access: readwrite
     - team: helsearbeidsgiver
+      application: im-soeknad-service
+      access: readwrite
+    - team: helsearbeidsgiver
       application: im-forespoersel-marker-besvart
       access: readwrite
     - team: helsearbeidsgiver
